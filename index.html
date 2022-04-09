@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers</title>
 </head>
 <body>
+    <header>
+        <h1>sneakers</h1>
+        <nav>
+            <ul><li>Collections</li></ul>
+            <ul><li>Men</li></ul>
+            <ul><li>Women</li></ul>
+            <ul><li>About</li></ul>
+            <ul><li>Contact</li></ul>
+        </nav>
+        <img src="static/images/icon-cart.svg" alt="cart">
+        <img src="static/images/image-avatar.png" alt="avatar">
+    </header>
+    <div id="main" class="card">
+        <div id="gallery" class="gallery">
+            <div id="mainImg" class="main-img"><img src="static/images/image-product-1-thumbnail.jpg" alt="img1-thumbnail"></div>
+            <div id="slideGalley" class="slide-gallery">
+                <div id="slideOne" class="imgThumb"><img src="static/images/image-product-1-thumbnail.jpg" alt="img1-thumbnail"></div>
+                <div id="slideTwo" class="imgThumb"><img src="static/images/image-product-2-thumbnail.jpg" alt="img2-thumbnail"></div>
+                <div id="slideThree" class="imgThumb"><img src="static/images/image-product-3-thumbnail.jpg" alt="img3-thumbnail"></div>
+                <div id="slideFour" class="imgThumb"><img src="static/images/image-product-4-thumbnail.jpg" alt="img4-thumbnail"></div>
+            </div>
+        </div>
+        <div class="card-left">
+            <h3 class="s-comp">SNEAKER COMPANY</h3>
+            <h1 class="s-header">Fall Limited Edition Sneakers</h1>
+            <p class ="s-descrip">These low profile snakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+            <p class="price-new">$125.00</p>
+            <p class="price-discount">50%</p>
+            <p class="price-original">$250.00</p>
+        </div>
+        <div>
+            <div id="cart" class="cart">
+                <img src="static/images/icon-minus.svg" alt="minus">
+                <span id="cartNum">0</span>
+                <img src="static/images/icon-plus.svg" alt="plus">
+            </div>
+            <div id="addCartBtn" class="add-cart-btn">
+                <img src="static/images/icon-cart.svg" alt="cart">
+                <p>Add to cart</p>
+            </div>
+        </div>
+    </div>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
 
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
