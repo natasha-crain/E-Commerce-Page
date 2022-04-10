@@ -4,29 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/styles/styles.css" rel="stylesheet" type="text/css" />
     <title>Sneakers</title>
 </head>
 <body>
     <header>
-        <h1>sneakers</h1>
+        <h1 class="logo">sneakers</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <nav>
-            <ul><li>Collections</li></ul>
-            <ul><li>Men</li></ul>
-            <ul><li>Women</li></ul>
-            <ul><li>About</li></ul>
-            <ul><li>Contact</li></ul>
+            <ul>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
-        <img src="static/images/icon-cart.svg" alt="cart">
-        <img src="static/images/image-avatar.png" alt="avatar">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span id="hamMenu" class="ham-menu "><img src="static/images/icon-menu.svg" alt=""></span>
+            <span id="closeMenu" class="close-menu invisible"><img src="static/images/icon-close.svg" alt=""></span>
+        </label>
+        <div class="cart-avatar">
+            <img class="cart-top" src="static/images/icon-cart.svg" alt="cart">
+            <img class="avatar" src="static/images/image-avatar.png" alt="avatar">
+        </div>
+        <div id="overlay" class="overlay"></div>
     </header>
-    <div id="main" class="card">
+    <div id="main" class="container">
         <div id="gallery" class="gallery">
-            <div id="mainImg" class="main-img"><img src="static/images/image-product-1-thumbnail.jpg" alt="img1-thumbnail"></div>
+            <!--<div id="mainImg" class="main-img"><img src="static/images/image-product-1-thumbnail.jpg" alt="img1-thumbnail"></div>-->
             <div id="slideGalley" class="slide-gallery">
-                <div id="slideOne" class="imgThumb"><img src="static/images/image-product-1-thumbnail.jpg" alt="img1-thumbnail"></div>
-                <div id="slideTwo" class="imgThumb"><img src="static/images/image-product-2-thumbnail.jpg" alt="img2-thumbnail"></div>
-                <div id="slideThree" class="imgThumb"><img src="static/images/image-product-3-thumbnail.jpg" alt="img3-thumbnail"></div>
-                <div id="slideFour" class="imgThumb"><img src="static/images/image-product-4-thumbnail.jpg" alt="img4-thumbnail"></div>
+                <div id="slideOne" class="image"><img src="static/images/image-product-1.jpg" alt="img1"></div>
+                <div id="slideTwo" class="image"><img src="static/images/image-product-2.jpg" alt="img2"></div>
+                <div id="slideThree" class="image"><img src="static/images/image-product-3.jpg" alt="img3"></div>
+                <div id="slideFour" class="image"><img src="static/images/image-product-4.jpg" alt="img4"></div>
+            </div>
+            <div class="arrows">
+                <span class="previous"><img src="static/images/icon-previous.svg" alt="ico-prev"></span>
+                <span class="next"><img src="static/images/icon-next.svg" alt="ico-next"></span>
+
             </div>
         </div>
         <div class="card-left">
@@ -50,6 +66,6 @@
         </div>
     </div>
 
-
+    <script src="static/scripts/script.js"></script>
 </body>
 </html>
