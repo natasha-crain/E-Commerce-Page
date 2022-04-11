@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1 class="logo">sneakers</h1>
+        <img class="logo" src="static/images/logo.svg" alt="logo">
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <nav>
             <ul>
@@ -20,10 +20,12 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span id="hamMenu" class="ham-menu "><img src="static/images/icon-menu.svg" alt=""></span>
-            <span id="closeMenu" class="close-menu invisible"><img src="static/images/icon-close.svg" alt=""></span>
-        </label>
+        <div id="menu">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span id="hamMenu" class="ham-menu"><img src="static/images/icon-menu.svg" alt=""></span>
+                <span id="closeMenu" class="close-menu"><img src="static/images/icon-close.svg" alt=""></span>
+            </label>
+        </div>
         <div class="cart-avatar">
             <img class="cart-top" src="static/images/icon-cart.svg" alt="cart">
             <img class="avatar" src="static/images/image-avatar.png" alt="avatar">
@@ -39,19 +41,20 @@
                 <div id="slideThree" class="image"><img src="static/images/image-product-3.jpg" alt="img3"></div>
                 <div id="slideFour" class="image"><img src="static/images/image-product-4.jpg" alt="img4"></div>
             </div>
-            <div class="arrows">
-                <span class="previous"><img src="static/images/icon-previous.svg" alt="ico-prev"></span>
-                <span class="next"><img src="static/images/icon-next.svg" alt="ico-next"></span>
-
+            <div>
+                <span class="previous-img arrows"><img src="static/images/icon-previous.svg" alt="ico-prev"></span>
+                <span class="next-img arrows"><img src="static/images/icon-next.svg" alt="ico-next"></span>
             </div>
         </div>
-        <div class="card-left">
+        <div class="card">
             <h3 class="s-comp">SNEAKER COMPANY</h3>
             <h1 class="s-header">Fall Limited Edition Sneakers</h1>
             <p class ="s-descrip">These low profile snakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-            <p class="price-new">$125.00</p>
-            <p class="price-discount">50%</p>
-            <p class="price-original">$250.00</p>
+            <div class="prices">
+                <h2 class="price-new">$125.00</h2>
+                <p class="price-discount">50%</p>
+                <p class="price-original">$250.00</p>
+            </div>
         </div>
         <div>
             <div id="cart" class="cart">
@@ -65,7 +68,6 @@
             </div>
         </div>
     </div>
-
     <script src="static/scripts/script.js"></script>
 </body>
 </html>

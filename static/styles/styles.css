@@ -2,7 +2,7 @@
 
 :root {
     font-family: 'Kumbh Sans';
-    --orange:  hsl(26, 100%, 55%);
+    --orange:  #eb9150;
     --paleorange: hsl(25, 100%, 94%);
     --darkblue:  hsl(220, 13%, 13%);
     --darkgrey: hsl(219, 9%, 45%);
@@ -35,8 +35,10 @@ header {
     position: unset;
     text-align: left;
     margin: 0;
-    margin-left: 2em;
-    margin-top: 8px;
+    margin-left: 56px;
+    margin-top: 21px;
+    height: 20px;
+    width: auto;
    
 }
 
@@ -50,6 +52,7 @@ nav {
     height: 100vh;
     z-index: 999;
     display: none;
+    
 }
 
 nav ul {
@@ -82,43 +85,39 @@ nav a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    margin-left: 1.5em;
-    margin-top: 1.5em;
+    margin-left: 24px;
+    margin-top: 24px;
     z-index: 999;
 }
 
-.ham-menu.visible {
-    display: none;
-}
-
-
-.close-menu.visible {
-    display: block;
-}
-.close-menu.invisible {
+.close-menu {
     display: none;
 }
 
 .nav-toggle:checked ~ nav {
     display: block;
+    
 }
 
 .cart-avatar {
     top: 0;
     right: 0;
-    margin-top: 10px;
-    margin-right: 1.5em;
+    margin: 0;
+    margin-top: 15px;
+    margin-right: 24px;
     position: absolute;
 }
 
 .avatar {
-    height: 25px;
+    height: 24px;
     width: auto;
     padding: 5px;
 }
 
 .cart-top {
     padding: 5px;
+    height: 20px;
+    width: auto;
 }
 
 .overlay {
@@ -133,15 +132,13 @@ nav a:hover {
     display: block;
 }
 
-
 .container {
     position: absolute;
     margin-top: 69px;
 }
 
-
 .slide-gallery {
-    position: relative;
+    position: absolute;
     height: 300px;
     overflow: hidden;
     position: relative;
@@ -151,5 +148,77 @@ nav a:hover {
 .slide-gallery img {
     width: 100%;
     object-fit: contain;
+}
 
+.arrows {
+    position: absolute;
+    top: 135px;
+    z-index: 998;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previous-img {
+    left: 24px;
+}
+
+.next-img {
+    right: 24px;
+}
+
+
+.card {
+    padding: 26px;
+}
+
+.s-comp {
+    font-size: 10pt;
+    color: var(--orange);
+    font-weight: 800;
+}
+
+.s-header {
+    font-weight: 700;
+}
+
+.s-descrip {
+    color: var(--darkgrey);
+    line-height: 1.6;
+}
+
+.prices {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.price-new {
+    font-weight: 700;
+    font-size: 1.75em;
+    line-height: 1.6; 
+}
+
+.price-discount {
+    color: var(--orange);
+    background-color: var(--paleorange);
+    width: 50px;
+    height: 27px;
+    border-radius: 20%;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.6;
+ 
+}
+
+.price-original {
+    color: var(--grey);
+    text-decoration: line-through;
+    font-weight: 700;
+    font-size: 1.5em; 
 }
