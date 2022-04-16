@@ -32,8 +32,25 @@
     </header>
     <div id="main" class="container">
         <div id="gallery" class="gallery">
-            <!--<div id="mainImg" class="main-img"><img src="static/images/image-product-1-thumbnail.jpg" alt="img1-thumbnail"></div>-->
-            <div id="slideGalley" class="slide-gallery">
+            <div id="slideGalley" class="slide-gallery"></div>
+            <div class="thumb-slide">
+                <span class="thumb-img"></span>
+                <span class="thumb-img"></span>
+                <span class="thumb-img"></span>
+                <span class="thumb-img"></span>
+            </div>
+            <div>
+                <span class="previous-img arrows "><img src="static/images/icon-previous.svg" alt="ico-prev"></span>
+                <span class="next-img arrows "><img src="static/images/icon-next.svg" alt="ico-next"></span>
+            </div>
+        </div>
+        <div id="gallery-modal" class="gallery-modal">
+            <div class="slide-gallery"></div>
+            <div class="thumb-slide">
+                <span class="thumb-img"></span>
+                <span class="thumb-img"></span>
+                <span class="thumb-img"></span>
+                <span class="thumb-img"></span>
             </div>
             <div>
                 <span class="previous-img arrows "><img src="static/images/icon-previous.svg" alt="ico-prev"></span>
@@ -49,19 +66,19 @@
                 <p class="price-discount">50%</p>
                 <p class="price-original">$250.00</p>
             </div>
-        </div>
-        <div class="cart-btns">
-            <button id="cart" class="cart">
-                <span><img class="minus" src="static/images/icon-minus.svg" alt="minus"></span>
-                <span id="cartNum">0</span>
-                <span><img class="plus" src="static/images/icon-plus.svg" alt="plus"></span>
-            </button>
-            <button id="addCartBtn" class="add-cart-btn">
-                <span>
-                    <img class="cart-bottom" src="static/images/icon-cart.svg" alt="cart">
-                </span>
-               <span><p>Add to cart</p></span> 
-            </button>
+            <div class="cart-btns">
+                <button id="cart" class="cart">
+                    <span><img class="minus" src="static/images/icon-minus.svg" alt="minus"></span>
+                    <span id="cartNum">0</span>
+                    <span><img class="plus" src="static/images/icon-plus.svg" alt="plus"></span>
+                </button>
+                <button id="addCartBtn" class="add-cart-btn">
+                    <span>
+                        <img class="cart-bottom" src="static/images/icon-cart.svg" alt="cart">
+                    </span>
+                   <span><p>Add to cart</p></span> 
+                </button>
+            </div>
         </div>
     </div>
     <script src="static/scripts/script.js"></script>
