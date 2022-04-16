@@ -1,19 +1,22 @@
 "use strict";
 
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-bar');
 const overlay = document.getElementById('overlay');
-const hamMenu = document.getElementById('hamMenu');
-const closeMenu = document.getElementById('closeMenu');
-const menu = document.querySelector('.nav-toggle-label');
 
-const toggleIcon = () => {
-    if(hamMenu.src == 'static/images/icon-menu.svg'){
-        hamMenu.src =' static/images/icon-close.svg';
-    } else {
-        hamMenu.src == 'static/images/icon-menu.svg'
-    }
-};
 
-hamMenu.addEventListener('click', () => {
-    overlay.classList.toggle('visible');
-    toggleIcon();
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
 });
+
+document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+    overlay.classList.remove('active');
+}))
+
+
+
+

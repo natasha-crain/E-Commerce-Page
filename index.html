@@ -10,22 +10,20 @@
 <body>
     <header>
         <img class="logo" src="static/images/logo.svg" alt="logo">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <nav>
-            <ul>
-                <li><a href="#">Collections</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link">Collections</a></li>
+                <li><a href="#" class="nav-link">Men</a></li>
+                <li><a href="#" class="nav-link">Women</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
             </ul>
         </nav>
-        <div id="menu">
-            <label for="nav-toggle" class="nav-toggle-label">
-                <span id="hamMenu" class="ham-menu"><img src="static/images/icon-menu.svg" alt=""></span>
-                <span id="closeMenu" class="close-menu"><img src="static/images/icon-close.svg" alt=""></span>
-            </label>
-        </div>
         <div class="cart-avatar">
             <img class="cart-top" src="static/images/icon-cart.svg" alt="cart">
             <img class="avatar" src="static/images/image-avatar.png" alt="avatar">
@@ -36,14 +34,10 @@
         <div id="gallery" class="gallery">
             <!--<div id="mainImg" class="main-img"><img src="static/images/image-product-1-thumbnail.jpg" alt="img1-thumbnail"></div>-->
             <div id="slideGalley" class="slide-gallery">
-                <div id="slideOne" class="image"><img src="static/images/image-product-1.jpg" alt="img1"></div>
-                <div id="slideTwo" class="image"><img src="static/images/image-product-2.jpg" alt="img2"></div>
-                <div id="slideThree" class="image"><img src="static/images/image-product-3.jpg" alt="img3"></div>
-                <div id="slideFour" class="image"><img src="static/images/image-product-4.jpg" alt="img4"></div>
             </div>
             <div>
-                <span class="previous-img arrows"><img src="static/images/icon-previous.svg" alt="ico-prev"></span>
-                <span class="next-img arrows"><img src="static/images/icon-next.svg" alt="ico-next"></span>
+                <span class="previous-img arrows "><img src="static/images/icon-previous.svg" alt="ico-prev"></span>
+                <span class="next-img arrows "><img src="static/images/icon-next.svg" alt="ico-next"></span>
             </div>
         </div>
         <div class="card">
@@ -56,18 +50,22 @@
                 <p class="price-original">$250.00</p>
             </div>
         </div>
-        <div>
-            <div id="cart" class="cart">
-                <img src="static/images/icon-minus.svg" alt="minus">
+        <div class="cart-btns">
+            <button id="cart" class="cart">
+                <span><img class="minus" src="static/images/icon-minus.svg" alt="minus"></span>
                 <span id="cartNum">0</span>
-                <img src="static/images/icon-plus.svg" alt="plus">
-            </div>
-            <div id="addCartBtn" class="add-cart-btn">
-                <img src="static/images/icon-cart.svg" alt="cart">
-                <p>Add to cart</p>
-            </div>
+                <span><img class="plus" src="static/images/icon-plus.svg" alt="plus"></span>
+            </button>
+            <button id="addCartBtn" class="add-cart-btn">
+                <span>
+                    <img class="cart-bottom" src="static/images/icon-cart.svg" alt="cart">
+                </span>
+               <span><p>Add to cart</p></span> 
+            </button>
         </div>
     </div>
     <script src="static/scripts/script.js"></script>
+    <!--jquery cdn-->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 </body>
 </html>
