@@ -470,19 +470,22 @@ header {
         filter: brightness(-100%);
     }
 
-    .cart-no {
+    .cart-count {
         position: absolute;
         width: 20px;
         height: 15px;
         background-color: var(--orange);
         color: white;
         font-size: .8em;
-        border-radius: px;
+        border-radius: 5px;
         right: 85px;
         top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
-    .cart-no p {
+    .cart-count p {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -516,12 +519,21 @@ header {
 
     .cart-items {
         position: absolute;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
         padding: 20px;
-        
+    }
+
+    .cart-empty {  
+        top: 20%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--darkgrey);
+        padding: 20px;
     }
 
     .cart-img {
@@ -547,7 +559,6 @@ header {
         font-weight: 500;
         line-height: 1.8;
         padding: 5px;
-
     }
 
     #priceTotal {
@@ -566,7 +577,7 @@ header {
     .checkout {
         width: 90%;
         height: 56px;
-        bottom: 10px;
+        top: 75%;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -582,15 +593,6 @@ header {
 
     .checkout:hover {
         background-color: var(--lightorange);
-    }
-
-    .cart-items h4 {  
-        position: relative;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        color: var(--darkgrey);
     }
 
     .overlay {
@@ -695,7 +697,6 @@ header {
         -moz-background-size: cover; 
         -o-background-size: cover;
     }
-
 
     .gallery-modal {
         background-color: var(--black);
@@ -889,19 +890,4 @@ header {
         margin-right: 7px;
     }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
