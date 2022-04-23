@@ -133,6 +133,24 @@ header {
     margin-right: 22px;
 }
 
+.cart-no {
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    background-color: var(--orange);
+    color: white;
+    font-size: .8em;
+    border-radius: 5px;
+    right: 24px;
+}
+
+.cart-no p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+
 .overlay {
     height: 100vh;
     width: 100%;
@@ -164,6 +182,9 @@ header {
     -o-background-size: cover;
 }
 
+.gallery-modal{
+    display: none;
+}
 .arrows {
     position: absolute;
     top: 135px;
@@ -281,11 +302,21 @@ header {
 .minus {
     position: relative;
     right: 30px;
+    cursor: pointer;
+}
+
+.minus:hover {
+    filter: brightness(150%);
 }
 
 .plus {
     position: relative;
     left: 30px;
+    cursor: pointer;
+}
+
+.plus:hover {
+    filter: brightness(150%);
 }
 
 .add-cart-btn {
@@ -304,6 +335,7 @@ header {
     font-size: 1em;
     font-weight: 700;
     box-shadow: 0px 20px 50px 0px var(--lightorange);
+    cursor: pointer;
 }
 
 .add-cart-btn p {
@@ -316,6 +348,10 @@ header {
     height: 16px;
     width: auto;
     margin-right: 7px;
+}
+
+.add-cart-btn:hover {
+    background-color: var(--lightorange);
 }
 
 /*------------------------------------------------media queries-----*/
@@ -386,6 +422,7 @@ header {
     
     .nav-menu a {
         text-decoration: none;
+        font-weight: 500;
         color: var(--darkgrey);
     }
     
@@ -414,14 +451,148 @@ header {
     .avatar {
         height: 50px;
         width: auto;
+        cursor: pointer;
+    }
+
+    .avatar:hover {
+        border: 2px solid var(--orange);
+        border-radius: 50%;
     }
     
     .cart-top {
         height: 20px;
         width: auto;
         margin-right: 46px;
+        cursor: pointer;
+    }
+
+    .cart-top:hover {
+        filter: brightness(-100%);
+    }
+
+    .cart-no {
+        position: absolute;
+        width: 20px;
+        height: 15px;
+        background-color: var(--orange);
+        color: white;
+        font-size: .8em;
+        border-radius: px;
+        right: 85px;
+        top: 10px;
     }
     
+    .cart-no p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+    }
+
+    .cart-container {
+        background-color: white;
+        width: 360px;
+        height: 255px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 30px 0px var(--grey);
+        top: 10%;
+        right: 15%;
+        position: fixed;
+
+    }
+
+    .cart-container h3 {
+        position: relative;
+        font-size: 1em;
+        padding: 20px;
+    }
+
+    .break {
+        position: relative;
+        width: 360px;
+        height: 3px;
+        background-color: var(--lightgrey);
+    }
+
+    .cart-items {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 20px;
+        
+    }
+
+    .cart-img {
+        height: 60px;
+        width: 60px;
+        border-radius: 10px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        padding: 5px;
+    }
+
+    .cart-content {
+        display: flex;
+        color: var(--darkgrey);
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 1em;
+        font-weight: 500;
+        line-height: 1.8;
+        padding: 5px;
+
+    }
+
+    #priceTotal {
+        font-weight: 700;
+        color: black;
+    }
+
+    .delete-btn {
+        cursor: pointer;
+    }
+
+    .delete-btn:hover {
+        filter: brightness(-100%);
+    }
+
+    .checkout {
+        width: 90%;
+        height: 56px;
+        bottom: 10px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        border: 0px;
+        border-radius: 10px;
+        font-size: 1em;
+        background-color: var(--orange);
+        color: white;
+        cursor: pointer;
+    }
+
+    .checkout:hover {
+        background-color: var(--lightorange);
+    }
+
+    .cart-items h4 {  
+        position: relative;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        color: var(--darkgrey);
+    }
+
     .overlay {
         display: none;
     }
@@ -529,7 +700,7 @@ header {
     .gallery-modal {
         background-color: var(--black);
         position: fixed;
-        display: block;
+        display: none;
         justify-content: center;
         align-items: center;
         top: 0;
@@ -584,11 +755,6 @@ header {
         left: 275px;
     }
     
-
-    
-
-
-
     .card {
         position: relative;
         display: flex;
