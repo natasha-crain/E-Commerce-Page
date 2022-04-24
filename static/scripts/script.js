@@ -1,9 +1,9 @@
 "use strict";
 
+//--------------------------------------------------------mobile hamburger menu
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-bar');
 const overlay = document.getElementById('overlay');
-
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
@@ -15,80 +15,108 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
     overlay.classList.remove('active');
-}))
+}));
 
-let products = [
-    {
-        name: 'Sneakers',
-        tag: 'fallsneakers',
-        price: 125,
-        inCart: 0
-    }
-]
 
-let cartBtn = document.getElementById('addCartBtn');
-let plusItems = document.getElementById('plus');
-let minusItems = document.getElementById('minus');
-let unitNumber = document.getElementById('cartNum');
-let cartItems = document.getElementById('cartCount');
-let itemTotal = document.getElementById('itemTotal');
-let priceTotal = document.getElementById('priceTotal');
-let cartEmpty = document.getElementById('cartEmpty');
-let cartContainer = document.getElementById('cartItems');
-
+//------------------------------------------------------------shopping functions
+const addCartBtn = document.getElementById('addCartBtn');
+const plusItems = document.getElementById('plus');
+const minusItems = document.getElementById('minus');
+const unitNumber = document.getElementById('cartNum');
+const cartCount = document.getElementById('cartCount');
+const itemTotal = document.getElementById('itemTotal');
+const priceTotal = document.getElementById('priceTotal');
+const cartEmpty = document.getElementById('cartEmpty');
+const cartItems = document.getElementById('cartItems');
+const deleteBtn = document.querySelectorAll('.delete-btn');
 let count = 0
 let cost = 0
 
+//-------------------------------------increment unit
 const addUnit = () => {
     count++;
     cost += 125 ;
+    count = Math.min(count, 10);
+    cost = Math.min(cost, 1250)
     unitNumber.innerHTML = count;
-    count = Math.min(count, 9);
 };
-
+//-------------------------------------decrement unit
 const minusUnit = () => {
     count--;
     cost -= 125;
+    count = Math.max(count, 0);
+    cost = Math.max(cost, 0)
     unitNumber.innerHTML = count;
-    count = Math.max(count, 1);
 };
-
+//------------------------------------plus/minus btns
 plusItems.addEventListener('click', () => {
     addUnit();
 });
-
 minusItems.addEventListener('click', () => {
     minusUnit();
 });
-
+//---------------------update cart unit count and cost
 const itemUpdate = () => {
     itemTotal.innerHTML = count;
     priceTotal.innerHTML = `$ ${cost}.00`;
-
 };
-
-cartBtn.addEventListener('click', () => {
+//-----------------update cart unit count on cart icon
+const addToCart = () => {
+    cartCount.innerHTML = count;
+};
+//---------------------------------update cart display
+const unhideCart = () => {
+    if(count >= 1) {
+        cartItems.style.display = 'flex';
+        cartEmpty.style.display = 'none';
+        addCartBtn.innerHTML = '<img class="cart-bottom" src="static/images/icon-cart.svg" alt="cart"> Update cart';
+    } else {
+        cartItems.style.display = 'none';
+        cartEmpty.style.display = 'flex';
+        addCartBtn.innerHTML = '<img class="cart-bottom" src="static/images/icon-cart.svg" alt="cart"> Add to cart';
+    };
+};
+//-----------------------------------------clear cart
+const clearCart = () => {
+    count = 0;
+    cost = 0;
+    unitNumber.innerHTML = count;
+    cartCount.innerHTML = count;
+    unhideCart();
+}
+deleteBtn.forEach(deleteBtn => {
+    deleteBtn.addEventListener('click', () => {
+        console.log('clicked');
+        clearCart();
+    });
+});
+//-------------------------------add to cart functions
+addCartBtn.addEventListener('click', () => {
     addToCart();
     itemUpdate();
     unhideCart();
-    //updateBtn();
+    revealCart();
 });
 
-const addToCart = () => {
-    console.log(typeof count);
-    //unitNumber = parseInt(unitNumber);
-    cartItems.innerHTML = count;
-    //console.log(typeof count);
-};
 
-const unhideCart = () => {
+const cartContainer = document.getElementById('cartContainer');
+const cartIcon = document.getElementById('cartTop');
+
+cartIcon.addEventListener('click', () => {
+    console.log('clicked');
+    cartContainer.classList.toggle('visible');
+    setTimeout(() => {
+        cartContainer.classList.remove('visible');
+    }, 5000)
+});
+
+const revealCart = () => {
     if(count >= 1) {
-        cartContainer.style.display = 'flex';
-        cartEmpty.style.display = 'none';
+        cartContainer.classList.add('visible');
+        setTimeout(() => {
+            cartContainer.classList.remove('visible');
+        }, 5000)
     }
-};
-/*
-const updateBtn = () => {
-    let changeBTN = document.getElementById('updateBTN');
-    changeBTN.innerHTML = 'Update Cart';
-};*/
+}
+
+

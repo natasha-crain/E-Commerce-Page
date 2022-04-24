@@ -117,7 +117,8 @@ header {
 }
 
 .cart-avatar {
-    position: absolute;
+    position: fixed;
+    display: flex;
     top: 20px;
     right: 24px;
 }
@@ -125,10 +126,11 @@ header {
 .avatar {
     height: 26px;
     width: auto;
+    margin-right: 30px;
 }
 
 .cart-top {
-    height: 22px;
+    height: 20px;
     width: auto;
     margin-right: 22px;
 }
@@ -149,6 +151,44 @@ header {
     justify-content: center;
     align-items: center;
     line-height: 1;
+}
+
+.cart-count {
+    position: absolute;
+    width: 18px;
+    height: 13px;
+    background-color: var(--orange);
+    color: white;
+    font-size: .8em;
+    border-radius: 5px;
+    right: 40px;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-count p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    font-size: 0.9em;
+}
+
+.cart-container {
+    background-color: white;
+    width: 80%;
+    height: 255px;
+    border-radius: 10px;
+    box-shadow: 0px;
+    top: 70px;
+    right: 60px;
+    position: absolute;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .overlay {
@@ -399,6 +439,7 @@ header {
         z-index: 999;
         grid-column:  1/ 3;
         margin: 0 auto;
+        margin-left: 30%;
     }
     
     .nav-menu {
@@ -478,7 +519,7 @@ header {
         color: white;
         font-size: .8em;
         border-radius: 5px;
-        right: 85px;
+        right: 120px;
         top: 10px;
         display: flex;
         justify-content: center;
@@ -501,7 +542,15 @@ header {
         top: 10%;
         right: 15%;
         position: fixed;
+        display: none;
+    }
 
+    .cart-container.visible {
+        display: block;
+        animation: fadeIn 5s linear;
+        -webkit-animation: fadeIn 100ms linear;
+        -moz-animation: fadeIn 100ms linear;
+        -o-animation: fadeIn 100ms linear;
     }
 
     .cart-container h3 {
@@ -889,5 +938,39 @@ header {
         width: auto;
         margin-right: 7px;
     }
-    
 }
+
+
+
+/*------------------animations*/
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 1; 
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0; 
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% { 
+        opacity: 1; 
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0; 
+    }
+  }
+
