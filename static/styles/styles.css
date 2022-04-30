@@ -117,14 +117,16 @@ header {
 }
 
 .cart-avatar {
-    position: fixed;
+    position: relative;
     display: flex;
-    top: 20px;
-    right: 24px;
+    justify-content: center;
+    align-items: center;
+    bottom: 3px;
+    left: 124px;
 }
 
 .avatar {
-    height: 26px;
+    height: 25px;
     width: auto;
     margin-right: 30px;
 }
@@ -135,34 +137,24 @@ header {
     margin-right: 22px;
 }
 
-.cart-no {
-    position: absolute;
+.cart-active:hover {
+    filter: brightness(-100%);
+}
+
+.cart-active.visible {
+    filter: brightness(-100%);
+}
+
+.cart-count {
+    position: relative;
     width: 20px;
     height: 15px;
     background-color: var(--orange);
     color: white;
-    font-size: .8em;
-    border-radius: 5px;
-    right: 24px;
-}
-
-.cart-no p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1;
-}
-
-.cart-count {
-    position: absolute;
-    width: 18px;
-    height: 13px;
-    background-color: var(--orange);
-    color: white;
-    font-size: .8em;
-    border-radius: 5px;
-    right: 40px;
-    top: 0px;
+    font-size: .7em;
+    border-radius: 10px;
+    left: 10px;
+    bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,27 +165,124 @@ header {
     justify-content: center;
     align-items: center;
     line-height: 1;
-    font-size: 0.9em;
 }
 
 .cart-container {
     background-color: white;
-    width: 80%;
+    width: 95%;
     height: 255px;
     border-radius: 10px;
-    box-shadow: 0px;
-    top: 70px;
-    right: 60px;
-    position: absolute;
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.308);
+    top: 66px;
+    margin: 10px;
+    position: fixed;
+    display: none;
+    align-items: center;
+}
+
+.cart-container.visible {
     display: block;
+    /*animation: fadeIn 5s linear;
+    -webkit-animation: fadeIn 100ms linear;
+    -moz-animation: fadeIn 100ms linear;
+    -o-animation: fadeIn 100ms linear;*/
+}
+
+.cart-container h3 {
+    position: relative;
+    font-size: 1em;
+    padding: 20px;
+}
+
+.break {
+    position: relative;
+    width: 360px;
+    height: 3px;
+    background-color: var(--lightgrey);
+}
+
+.cart-items {
+    position: absolute;
+    display: none;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding: 20px;
+}
+
+.cart-empty {  
+    top: 20%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--darkgrey);
+    padding: 20px;
+}
+
+.cart-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    padding: 5px;
+}
+
+.cart-content {
+    display: flex;
+    color: var(--darkgrey);
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.8;
+    padding: 5px;
+}
+
+#priceTotal {
+    font-weight: 700;
+    color: black;
+}
+
+.delete-btn {
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    filter: brightness(-100%);
+}
+
+.checkout {
+    width: 90%;
+    height: 56px;
+    top: 75%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: var(--orange);
+    color: white;
+    cursor: pointer;
+}
+
+.checkout:hover {
+    background-color: var(--lightorange);
 }
 
 .overlay {
-    height: 100vh;
+    position: fixed;
     width: 100%;
+    height: 100%;
     background-color: var(--black);
     z-index: 998;
     display: none;
@@ -432,14 +521,17 @@ header {
         height: 20px;
         width: auto;
     }
-    
+
     .nav-bar {
         position: relative;
         all: unset;
         z-index: 999;
-        grid-column:  1/ 3;
+        grid-column:  2/ 2;
+        justify-content: center;
+        align-items: center;
         margin: 0 auto;
-        margin-left: 30%;
+        margin-top: 5px;
+        margin-left: -175px;
     }
     
     .nav-menu {
@@ -465,30 +557,47 @@ header {
         text-decoration: none;
         font-weight: 500;
         color: var(--darkgrey);
+        position: relative;
     }
     
     .nav-menu a:hover {
-        color: var(--grey);
+        color: var(--darkblue);
+
+    }
+
+    .nav-menu a::after {
+        content: '';
+        display: block;
+        height: 5px;
+        background: var(--orange);
+        position: absolute;
+        top: 3.6em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transform-origin: left;
+        transition: transform ease-in-out 250ms;
     }
     
+    .nav-menu a:hover::after {
+        transform: scale(1, 1);
+    }
+
+   
+
+
     .nav-bar.active {
         display: block;
+    }
+
+    .cart-avatar {
+        grid-column:  3/ 3;
     }
     
     .hamburger {
         display: none;
     }
-   
-    .cart-avatar {
-        position: relative;
-        display: flex;
-        grid-column:  3/ 3;
-        justify-content: flex-end;
-        align-items: center;
-        top: 0px;
-        right: 0px;
-    }
-    
+
     .avatar {
         height: 50px;
         width: auto;
@@ -507,39 +616,13 @@ header {
         cursor: pointer;
     }
 
-    .cart-top:hover {
-        filter: brightness(-100%);
-    }
-
-    .cart-count {
-        position: absolute;
-        width: 20px;
-        height: 15px;
-        background-color: var(--orange);
-        color: white;
-        font-size: .8em;
-        border-radius: 5px;
-        right: 120px;
-        top: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .cart-count p {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        line-height: 1;
-    }
-
     .cart-container {
         background-color: white;
         width: 360px;
-        height: 255px;
+        height: 258px;
         border-radius: 10px;
-        box-shadow: 0px 5px 30px 0px var(--grey);
-        top: 10%;
+        box-shadow: 0px 10px 20px 0px var(--grey);
+        top: 8%;
         right: 15%;
         position: fixed;
         display: none;
@@ -547,10 +630,6 @@ header {
 
     .cart-container.visible {
         display: block;
-        animation: fadeIn 5s linear;
-        -webkit-animation: fadeIn 100ms linear;
-        -moz-animation: fadeIn 100ms linear;
-        -o-animation: fadeIn 100ms linear;
     }
 
     .cart-container h3 {

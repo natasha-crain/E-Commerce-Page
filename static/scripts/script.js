@@ -86,7 +86,6 @@ const clearCart = () => {
 }
 deleteBtn.forEach(deleteBtn => {
     deleteBtn.addEventListener('click', () => {
-        console.log('clicked');
         clearCart();
     });
 });
@@ -98,16 +97,16 @@ addCartBtn.addEventListener('click', () => {
     revealCart();
 });
 
-
 const cartContainer = document.getElementById('cartContainer');
 const cartIcon = document.getElementById('cartTop');
+const cartActive = document.getElementById('cartActive');
 
 cartIcon.addEventListener('click', () => {
-    console.log('clicked');
     cartContainer.classList.toggle('visible');
+    cartActive.classList.toggle('visible');
     setTimeout(() => {
         cartContainer.classList.remove('visible');
-    }, 5000)
+    }, 8000)
 });
 
 const revealCart = () => {
@@ -115,7 +114,7 @@ const revealCart = () => {
         cartContainer.classList.add('visible');
         setTimeout(() => {
             cartContainer.classList.remove('visible');
-        }, 5000)
+        }, 7000)
     }
 }
 
