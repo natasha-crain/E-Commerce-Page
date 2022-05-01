@@ -50,30 +50,43 @@
     </header>
     <div id="main" class="container">
         <div id="gallery" class="gallery">
-            <div id="slideGalley" class="slide-gallery"></div>
+            <div id="slideGalley" class="slide-gallery">
+                    <img src="static/images/image-product-1.jpg" alt="big-img"> 
+               <!--<img id="bigImg" class="big-img" src="static/images/image-product-1.jpg" alt="big-img">-->
+            </div>
             <div class="thumb-slide">
-                <span class="thumb-img"></span>
-                <span class="thumb-img"></span>
-                <span class="thumb-img"></span>
-                <span class="thumb-img"></span>
+                <img class="thumb-img" src="static/images/image-product-1.jpg" alt="img-1">
+                <img class="thumb-img" src="static/images/image-product-2.jpg" alt="img-1">
+                <img class="thumb-img" src="static/images/image-product-3.jpg" alt="img-1">
+                <img class="thumb-img" src="static/images/image-product-4.jpg" alt="img-1">
             </div>
             <div>
                 <span class="previous-img arrows "><img src="static/images/icon-previous.svg" alt="ico-prev"></span>
                 <span class="next-img arrows "><img src="static/images/icon-next.svg" alt="ico-next"></span>
             </div>
         </div>
-        <div id="gallery-modal" class="gallery-modal">
-            <div class="slide-gallery"></div>
-            <div class="thumb-slide">
-                <span class="thumb-img"></span>
-                <span class="thumb-img"></span>
-                <span class="thumb-img"></span>
-                <span class="thumb-img"></span>
+        <div id="galleryModal" class="gallery-modal ">
+            <div>
+                <img id="closeModal" class="close-modal" src="static/images/icon-close.svg" alt="close-modal">
             </div>
             <div>
-                <span class="previous-img arrows "><img src="static/images/icon-previous.svg" alt="ico-prev"></span>
-                <span class="next-img arrows "><img src="static/images/icon-next.svg" alt="ico-next"></span>
+                <img id="bigImgPop" class="slide-img" src="static/images/image-product-1.jpg" alt="big-img">
+                <!--<img class="slide-img" src="static/images/image-product-1.jpg" alt="img-1">
+                <img class="slide-img" src="static/images/image-product-2.jpg" alt="img-2">
+                <img class="slide-img" src="static/images/image-product-3.jpg" alt="img-3">
+                <img class="slide-img" src="static/images/image-product-4.jpg" alt="img-4">-->
             </div>
+            <div class="thumb-slide-pop">
+                <img class="thumb-img-pop" src="static/images/image-product-1.jpg" alt="img-1">
+                <img class="thumb-img-pop" src="static/images/image-product-2.jpg" alt="img-2">
+                <img class="thumb-img-pop" src="static/images/image-product-3.jpg" alt="img-3">
+                <img class="thumb-img-pop" src="static/images/image-product-4.jpg" alt="img-4">
+            </div>
+            <div>
+                <div id="preImg" class="previous-img-pop arrows-pop "><img src="static/images/icon-previous.svg" alt="ico-prev"></div>
+                <div id="nextImg" class="next-img-pop arrows-pop "><img src="static/images/icon-next.svg" alt="ico-next"></div>
+            </div>
+            <div id="modalBG" class="modal-bg"></div>
         </div>
         <div class="card">
             <h3 class="s-comp">SNEAKER COMPANY</h3>

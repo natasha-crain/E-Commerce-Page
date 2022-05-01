@@ -16,7 +16,52 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     navMenu.classList.remove('active');
     overlay.classList.remove('active');
 }));
+//---------------------------------------------------------------desktop gallery
+const closeModal = document.getElementById('closeModal');
+const galModal = document.getElementById('galleryModal');
+const bigImg = document.getElementById('slideGalley');
+const smallImg = document.querySelectorAll(".thumb-img");
 
+//---------------------------------------change big img
+const desktopImgs = () => {
+    smallImg.forEach(smallImg => {
+        smallImg.addEventListener('click', () => {
+            bigImg.src = smallImg.src;
+        });
+    });
+};
+//------------------------------------------show modal
+const showModal = () => {
+    bigImg.addEventListener('click', () => {
+        if(window.innerWidth < 960) {
+            galModal.style.display = 'none';
+        }else{
+            galModal.style.display = 'block';
+        }
+    });
+}
+//------------------------------------------close modal
+closeModal.addEventListener('click', () => {
+    console.log('clicked');
+    galModal.style.display = 'none';
+});
+
+//---------------------------------change modal big img
+const modalGallery = () => {
+    const smallImgPop = document.querySelectorAll(".thumb-img-pop");
+    smallImgPop.forEach(smallImgPop => {
+        smallImgPop.addEventListener('click', () => {
+            bigImgPop.src = smallImgPop.src;
+        });
+    });
+}
+
+
+
+showModal();
+desktopImgs();
+modalGallery();
+//arrowHover();
 
 //------------------------------------------------------------shopping functions
 const addCartBtn = document.getElementById('addCartBtn');
