@@ -8,7 +8,7 @@
     <title>Sneakers</title>
 </head>
 <body>
-    <header>
+    <header><!--header-->
         <img class="logo" src="static/images/logo.svg" alt="logo">
         <div class="hamburger">
             <span class="bar"></span>
@@ -31,7 +31,7 @@
             </div>
             <img class="avatar" src="static/images/image-avatar.png" alt="avatar">
         </div>
-        <div id="cartContainer" class="cart-container ">
+        <div id="cartContainer" class="cart-container "><!--cart-->
             <h3>Cart</h3>
             <div class="break"></div>
             <div id="cartItems" class="cart-items">
@@ -48,49 +48,60 @@
         </div>
         <div id="overlay" class="overlay"></div>
     </header>
-    <div id="main" class="container">
+    <div id="main" class="container"><!--main container-->
         <div id="gallery" class="gallery">
-            <div id="slideGalley" class="slide-gallery">
-                <img class="slideImg" src="static/images/image-product-1.jpg" alt="img-1">
-                <img class="slideImg" src="static/images/image-product-2.jpg" alt="img-2">
-                <img class="slideImg" src="static/images/image-product-3.jpg" alt="img-3">
-                <img class="slideImg" src="static/images/image-product-4.jpg" alt="img-4">
+            <div id="slideGalley" class="slide-gallery"><!--mobile/desktop gallery-->
+                <img class="mob-slide-img" src="static/images/image-product-1.jpg" alt="img-1">
+                <img class="mob-slide-img" src="static/images/image-product-2.jpg" alt="img-2">
+                <img class="mob-slide-img" src="static/images/image-product-3.jpg" alt="img-3">
+                <img class="mob-slide-img" src="static/images/image-product-4.jpg" alt="img-4">
             </div>
-            <div class="thumb-slide">
-                <img class="thumb-img" src="static/images/image-product-1.jpg" alt="img-1">
-                <img class="thumb-img" src="static/images/image-product-2.jpg" alt="img-2">
-                <img class="thumb-img" src="static/images/image-product-3.jpg" alt="img-3">
-                <img class="thumb-img" src="static/images/image-product-4.jpg" alt="img-4">
+            <div class="thumb-slide"><!--thumb imgs [not on mobile]-->
+                <img class="thumb-img btm-slider" src="static/images/image-product-1.jpg" onclick="btmSlider(1)" alt="img-1">
+                <img class="thumb-img btm-slider" src="static/images/image-product-2.jpg" onclick="btmSlider(2)" alt="img-2">
+                <img class="thumb-img btm-slider" src="static/images/image-product-3.jpg" onclick="btmSlider(3)" alt="img-3">
+                <img class="thumb-img btm-slider" src="static/images/image-product-4.jpg" onclick="btmSlider(4)" alt="img-4">
             </div>
-            <div>
+            <div><!--arrows-->
                 <span class="previous-img arrows "><img src="static/images/icon-previous.svg" alt="ico-prev" onclick="sideSlide(-1)"></span>
                 <span class="next-img arrows "><img src="static/images/icon-next.svg" alt="ico-next" onclick="sideSlide(1)"></span>
             </div>
         </div>
-        <div id="galleryModal" class="gallery-modal ">
+        <div id="galleryModal" class="gallery-modal "><!--pop-up gallery-->
             <div>
                 <img id="closeModal" class="close-modal" src="static/images/icon-close.svg" alt="close-modal">
             </div>
             <div>
-                <img id="bigImgPop" class="slide-img" src="static/images/image-product-1.jpg" alt="big-img">
-                <!--<img class="slide-img" src="static/images/image-product-1.jpg" alt="img-1">
-                <img class="slide-img" src="static/images/image-product-2.jpg" alt="img-2">
-                <img class="slide-img" src="static/images/image-product-3.jpg" alt="img-3">
-                <img class="slide-img" src="static/images/image-product-4.jpg" alt="img-4">-->
+                <img id="bigImgPop" class="slide-img modal-img big-img" src="static/images/image-product-1.jpg" alt="img-1">
+                <img class="slide-img modal-img" src="static/images/image-product-2.jpg" alt="img-2">
+                <img class="slide-img modal-img"src="static/images/image-product-3.jpg" alt="img-3">
+                <img class="slide-img modal-img" src="static/images/image-product-4.jpg" alt="img-4">
             </div>
             <div class="thumb-slide-pop">
-                <img class="thumb-img-pop" src="static/images/image-product-1.jpg" alt="img-1">
-                <img class="thumb-img-pop" src="static/images/image-product-2.jpg" alt="img-2">
-                <img class="thumb-img-pop" src="static/images/image-product-3.jpg" alt="img-3">
-                <img class="thumb-img-pop" src="static/images/image-product-4.jpg" alt="img-4">
+                <div>
+                    <span class="thumb-img-pop-bg"></span>
+                    <img class="thumb-img-pop btm-slider" src="static/images/image-product-1.jpg" onclick="btmSlider(1)" alt="img-1">
+                </div>
+                <div>
+                    <span class="thumb-img-pop-bg"></span>
+                    <img class="thumb-img-pop btm-slider" src="static/images/image-product-2.jpg" onclick="btmSlider(2)" alt="img-2">
+                </div>
+                <div>
+                    <span class="thumb-img-pop-bg"></span>
+                    <img class="thumb-img-pop btm-slider" src="static/images/image-product-3.jpg" onclick="btmSlider(3)" alt="img-3">
+                </div>
+                <div>
+                    <span class="thumb-img-pop-bg"></span>
+                    <img class="thumb-img-pop btm-slider" src="static/images/image-product-4.jpg" onclick="btmSlider(4)" alt="img-4">
+                </div>
             </div>
             <div>
-                <div id="preImg" class="previous-img-pop arrows-pop "><img src="static/images/icon-previous.svg" alt="ico-prev"></div>
-                <div id="nextImg" class="next-img-pop arrows-pop "><img src="static/images/icon-next.svg" alt="ico-next"></div>
+                <div id="preImg" class="previous-img-pop arrows-pop "><img src="static/images/icon-previous.svg" onclick="sideSlide(-1)" alt="ico-prev"></div>
+                <div id="nextImg" class="next-img-pop arrows-pop "><img src="static/images/icon-next.svg" onclick="sideSlide(1)" alt="ico-next"></div>
             </div>
             <div id="modalBG" class="modal-bg"></div>
         </div>
-        <div class="card">
+        <div class="card"><!--product info/prices card-->
             <h3 class="s-comp">SNEAKER COMPANY</h3>
             <h1 class="s-header">Fall Limited Edition Sneakers</h1>
             <p class ="s-descrip">These low profile snakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
@@ -99,7 +110,7 @@
                 <p class="price-discount">50%</p>
                 <p class="price-original">$250.00</p>
             </div>
-            <div class="cart-btns">
+            <div class="cart-btns"><!--add to cart btns-->
                 <button id="cart" class="cart">
                     <span><img id="minus" class="minus" src="static/images/icon-minus.svg" alt="minus"></span>
                     <span id="cartNum">0</span>
@@ -114,8 +125,8 @@
             </div>
         </div>
     </div>
+    <!--scripts-->
     <script src="static/scripts/script.js"></script>
-    <!--jquery cdn-->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 </body>
 </html>

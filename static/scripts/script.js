@@ -16,7 +16,7 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     navMenu.classList.remove('active');
     overlay.classList.remove('active');
 }));
-//---------------------------------------------------------------desktop gallery
+//----------------------------------------------------------------gallery slide
 const closeModal = document.getElementById('closeModal');
 const galModal = document.getElementById('galleryModal');
 const bigImg = document.getElementById('slideGalley');
@@ -36,36 +36,37 @@ function sideSlide(e) {
 function showImg(e) {
     let i;
 
-    const slideImg = document.querySelectorAll('.slideImg');
-    const sliders = document.querySelectorAll('.btm-slider');
+    const slideImg = document.querySelectorAll('.mob-slide-img');
+    const modalImg = document.querySelectorAll('.slide-img');
+    const btmSlider = document.querySelectorAll('.btm-slider');
+    const modalSlider = document.querySelectorAll('.thumb-img-pop');
 
-    if (e > slideImg.length) {
+    if (e > slideImg.length && e > modalImg.length) {
         indexValue = 1;
     }
     if (e < 1) {
         indexValue = slideImg.length;
+        indexValue = modalImg.length;
     }
 
     for (i = 0; i < slideImg.length; i++) {
         slideImg[i].style.display = 'none';
+        modalImg[i].style.display = 'none';
+    }
+
+    for (i = 0; i <btmSlider.length; i++) {
+        btmSlider[i].style.opacity = '1';
+    }
+
+    for (i = 0; i <modalSlider.length; i++) {
+        modalSlider[i].style.opacity = '1';
     }
 
     slideImg[indexValue - 1].style.display = 'block';
+    modalImg[indexValue - 1].style.display = 'block';
+    btmSlider[indexValue - 1].style.opacity = '0.5';
+    modalSlider[indexValue - 1].style.opacity = '0.5';
 }
-
-
-/*
-//---------------------------------------change big img
-const desktopImgs = () => {
-    smallImg.forEach(smallImg => {
-        smallImg.addEventListener('click', () => {
-            bigImg.src = smallImg.src;
-        });
-    });
-};
-*/
-
-
 
 //------------------------------------------show modal
 const showModal = () => {
@@ -79,28 +80,10 @@ const showModal = () => {
 }
 //------------------------------------------close modal
 closeModal.addEventListener('click', () => {
-    console.log('clicked');
     galModal.style.display = 'none';
 });
 
-//---------------------------------change modal big img
-const modalGallery = () => {
-    const smallImgPop = document.querySelectorAll(".thumb-img-pop");
-    smallImgPop.forEach(smallImgPop => {
-        smallImgPop.addEventListener('click', () => {
-            bigImgPop.src = smallImgPop.src;
-        });
-    });
-}
-
-
-
-
-
 showModal();
-//desktopImgs();
-modalGallery();
-//arrowHover();
 
 //------------------------------------------------------------shopping functions
 const addCartBtn = document.getElementById('addCartBtn');
