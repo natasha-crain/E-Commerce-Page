@@ -21,7 +21,40 @@ const closeModal = document.getElementById('closeModal');
 const galModal = document.getElementById('galleryModal');
 const bigImg = document.getElementById('slideGalley');
 const smallImg = document.querySelectorAll(".thumb-img");
+let indexValue = 1;
 
+showImg(indexValue);
+
+function btmSlider(e) {
+    showImg(indexValue = e);
+}
+
+function sideSlide(e) {
+    showImg(indexValue += e);
+}
+
+function showImg(e) {
+    let i;
+
+    const slideImg = document.querySelectorAll('.slideImg');
+    const sliders = document.querySelectorAll('.btm-slider');
+
+    if (e > slideImg.length) {
+        indexValue = 1;
+    }
+    if (e < 1) {
+        indexValue = slideImg.length;
+    }
+
+    for (i = 0; i < slideImg.length; i++) {
+        slideImg[i].style.display = 'none';
+    }
+
+    slideImg[indexValue - 1].style.display = 'block';
+}
+
+
+/*
 //---------------------------------------change big img
 const desktopImgs = () => {
     smallImg.forEach(smallImg => {
@@ -30,6 +63,10 @@ const desktopImgs = () => {
         });
     });
 };
+*/
+
+
+
 //------------------------------------------show modal
 const showModal = () => {
     bigImg.addEventListener('click', () => {
@@ -58,8 +95,10 @@ const modalGallery = () => {
 
 
 
+
+
 showModal();
-desktopImgs();
+//desktopImgs();
 modalGallery();
 //arrowHover();
 

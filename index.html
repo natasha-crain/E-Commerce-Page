@@ -51,18 +51,20 @@
     <div id="main" class="container">
         <div id="gallery" class="gallery">
             <div id="slideGalley" class="slide-gallery">
-                    <img src="static/images/image-product-1.jpg" alt="big-img"> 
-               <!--<img id="bigImg" class="big-img" src="static/images/image-product-1.jpg" alt="big-img">-->
+                <img class="slideImg" src="static/images/image-product-1.jpg" alt="img-1">
+                <img class="slideImg" src="static/images/image-product-2.jpg" alt="img-2">
+                <img class="slideImg" src="static/images/image-product-3.jpg" alt="img-3">
+                <img class="slideImg" src="static/images/image-product-4.jpg" alt="img-4">
             </div>
             <div class="thumb-slide">
                 <img class="thumb-img" src="static/images/image-product-1.jpg" alt="img-1">
-                <img class="thumb-img" src="static/images/image-product-2.jpg" alt="img-1">
-                <img class="thumb-img" src="static/images/image-product-3.jpg" alt="img-1">
-                <img class="thumb-img" src="static/images/image-product-4.jpg" alt="img-1">
+                <img class="thumb-img" src="static/images/image-product-2.jpg" alt="img-2">
+                <img class="thumb-img" src="static/images/image-product-3.jpg" alt="img-3">
+                <img class="thumb-img" src="static/images/image-product-4.jpg" alt="img-4">
             </div>
             <div>
-                <span class="previous-img arrows "><img src="static/images/icon-previous.svg" alt="ico-prev"></span>
-                <span class="next-img arrows "><img src="static/images/icon-next.svg" alt="ico-next"></span>
+                <span class="previous-img arrows "><img src="static/images/icon-previous.svg" alt="ico-prev" onclick="sideSlide(-1)"></span>
+                <span class="next-img arrows "><img src="static/images/icon-next.svg" alt="ico-next" onclick="sideSlide(1)"></span>
             </div>
         </div>
         <div id="galleryModal" class="gallery-modal ">
