@@ -173,7 +173,7 @@ cartIcon.addEventListener('click', () => {
     cartActive.classList.toggle('visible');
     setTimeout(() => {
         cartContainer.classList.remove('visible');
-    }, 8000)
+    }, 10000)
 });
 
 const revealCart = () => {
@@ -181,7 +181,7 @@ const revealCart = () => {
         cartContainer.classList.add('visible');
         setTimeout(() => {
             cartContainer.classList.remove('visible');
-        }, 7000)
+        }, 10000)
     }
 }
 
