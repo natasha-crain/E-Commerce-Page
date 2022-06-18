@@ -35,12 +35,12 @@
             <h3>Cart</h3>
             <div class="break"></div>
             <div id="cartItems" class="cart-items">
-                <img class="cart-img" src="static/images/image-product-1-thumbnail.jpg" alt="product-thumb"></img>
+                <img class="cart-img" src="static/images/image-product-1-thumbnail.jpg" alt="product-thumb">
                 <div class="cart-content">
                     <p>Fall Limited Edition Sneakers $125.00 x <span id="itemTotal">0</span> <span id="priceTotal">$0.00</span></p>
                     <span><img id="deleteBtn" class="delete-btn" src="static/images/icon-delete.svg" alt="delete-btn"></span>
                 </div>
-                <button id="checkOut" class="checkout"><h3>Checkout</h3></button>
+                <button id="checkOut" class="checkout">Checkout</button>
             </div>
             <div id="cartEmpty" class="cart-empty">
                 <h4>Your cart is empty.</h4>
@@ -74,7 +74,7 @@
             <div>
                 <img id="bigImgPop" class="slide-img modal-img big-img" src="static/images/image-product-1.jpg" alt="img-1">
                 <img class="slide-img modal-img" src="static/images/image-product-2.jpg" alt="img-2">
-                <img class="slide-img modal-img"src="static/images/image-product-3.jpg" alt="img-3">
+                <img class="slide-img modal-img" src="static/images/image-product-3.jpg" alt="img-3">
                 <img class="slide-img modal-img" src="static/images/image-product-4.jpg" alt="img-4">
             </div>
             <div class="thumb-slide-pop">
@@ -96,15 +96,15 @@
                 </div>
             </div>
             <div>
-                <div id="preImg" class="previous-img-pop arrows-pop "><img src="static/images/icon-previous.svg" onclick="sideSlide(-1)" alt="ico-prev"></div>
-                <div id="nextImg" class="next-img-pop arrows-pop "><img src="static/images/icon-next.svg" onclick="sideSlide(1)" alt="ico-next"></div>
+                <div id="preImg" class="previous-img-pop arrows-pop "><img class="arrow-hover" src="static/images/icon-previous.svg" onclick="sideSlide(-1)" alt="ico-prev"></div>
+                <div id="nextImg" class="next-img-pop arrows-pop "><img class="arrow-hover" src="static/images/icon-next.svg" onclick="sideSlide(1)" alt="ico-next"></div>
             </div>
             <div id="modalBG" class="modal-bg"></div>
         </div>
         <div class="card"><!--product info/prices card-->
             <h3 class="s-comp">SNEAKER COMPANY</h3>
             <h1 class="s-header">Fall Limited Edition Sneakers</h1>
-            <p class ="s-descrip">These low profile snakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+            <p class ="s-descrip">These low profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
             <div class="prices">
                 <h2 class="price-new">$125.00</h2>
                 <p class="price-discount">50%</p>
@@ -120,13 +120,12 @@
                     <span>
                         <img class="cart-bottom" src="static/images/icon-cart.svg" alt="cart">
                     </span>
-                   <span><p id="updateBtn">Add to cart</p></span> 
+                   <span id="updateBtn">Add to cart</span> 
                 </button>
             </div>
         </div>
     </div>
     <!--scripts-->
     <script src="static/scripts/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 </body>
 </html>

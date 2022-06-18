@@ -16,11 +16,12 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     navMenu.classList.remove('active');
     overlay.classList.remove('active');
 }));
+
 //----------------------------------------------------------------gallery slide
 const closeModal = document.getElementById('closeModal');
 const galModal = document.getElementById('galleryModal');
 const bigImg = document.getElementById('slideGalley');
-const smallImg = document.querySelectorAll(".thumb-img");
+const smallImg = document.querySelectorAll('.thumb-img');
 let indexValue = 1;
 
 showImg(indexValue);
@@ -78,6 +79,7 @@ const showModal = () => {
         }
     });
 }
+
 //------------------------------------------close modal
 closeModal.addEventListener('click', () => {
     galModal.style.display = 'none';
@@ -181,8 +183,8 @@ const revealCart = () => {
         cartContainer.classList.add('visible');
         setTimeout(() => {
             cartContainer.classList.remove('visible');
-        }, 10000)
+        }, 10000);
     }
-}
+};
 
 

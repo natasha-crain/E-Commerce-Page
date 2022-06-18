@@ -139,6 +139,7 @@ header {
 
 .cart-active:hover {
     filter: brightness(-100%);
+    transition: all ease 0.2s;
 }
 
 .cart-active.visible {
@@ -254,6 +255,7 @@ header {
 
 .delete-btn:hover {
     filter: brightness(-100%);
+    transition: all ease 0.2s;
 }
 
 .checkout {
@@ -268,6 +270,7 @@ header {
     border: 0px;
     border-radius: 10px;
     font-size: 1em;
+    font-weight: bold;
     background-color: var(--orange);
     color: white;
     cursor: pointer;
@@ -275,6 +278,7 @@ header {
 
 .checkout:hover {
     background-color: var(--lightorange);
+    transition: all ease 0.2s;
 }
 
 /*----------main container styles-------------*/
@@ -340,6 +344,7 @@ header {
 
 .arrows img:hover {
     filter: invert(56%) sepia(13%) saturate(5686%) hue-rotate(347deg) brightness(103%) contrast(102%);
+    transition: all ease 0.2s;
 }
 
 .previous-img {
@@ -455,6 +460,7 @@ header {
 
 .minus:hover {
     filter: brightness(150%);
+    transition: all ease 0.2s;
 }
 
 .plus {
@@ -465,6 +471,7 @@ header {
 
 .plus:hover {
     filter: brightness(150%);
+    transition: all ease 0.2s;
 }
 
 .add-cart-btn {
@@ -500,9 +507,243 @@ header {
 
 .add-cart-btn:hover {
     background-color: var(--lightorange);
+    transition: all ease 0.2s;
 }
 
 /*-------------------------media queries--------------------------*/
+
+
+/*--------small mobile styling-----*/
+
+@media only screen and (min-width: 320px) and (max-width: 360px) and (orientation: portrait) {
+
+    body {
+        overflow: scroll;
+    }
+
+    header {
+        background-color: white;
+        text-align: left;
+        position: fixed;
+        width: 100%;
+        height: 68px;
+        z-index: 2000;
+        display: flex;
+    }
+    
+    .logo {
+        position: unset;
+        text-align: left;
+        margin: 0;
+        margin-left: 56px;
+        margin-top: 21px;
+        height: 18px;
+        width: auto;
+    }
+    
+    .cart-avatar {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 3px;
+        left: 15%;
+    }
+
+    .cart-content {
+        display: flex;
+        color: var(--darkgrey);
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 0.8em;
+        font-weight: 500;
+        line-height: 1.8;
+        padding: 5px;
+    }
+
+    .slide-gallery {
+        position: relative;
+        display: flex;
+        height: 250px;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .slide-gallery img {
+        display: flex;
+        height: 120%;
+        min-width: 100%;
+    }
+
+    .arrows {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        background-color: white;
+        top: 115px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    .price-new {
+        font-weight: 700;
+        font-size: 1.5em;
+        line-height: 1.6; 
+    }
+    
+    .price-discount {
+        color: var(--orange);
+        background-color: var(--paleorange);
+        width: 50px;
+        height: 27px;
+        border-radius: 20%;
+        text-align: center;
+        font-weight: 700;
+        line-height: 1.75;
+        margin-right: 60px;
+    }
+
+    .price-original {
+        color: var(--grey);
+        text-decoration: line-through;
+        font-weight: 700;
+        font-size: 1em; 
+    }
+
+}
+
+/*--small mobile styling (landscape)--*/
+
+@media only screen and (min-width: 320px) and (max-width: 740px) and (orientation: landscape) {
+
+    body {
+        overflow: scroll;
+    }
+
+    header {
+        background-color: white;
+        text-align: left;
+        position: fixed;
+        width: 100%;
+        height: 68px;
+        z-index: 2000;
+        display: flex;
+    }
+    
+    .logo {
+        position: unset;
+        text-align: left;
+        margin: 0;
+        margin-left: 56px;
+        margin-top: 21px;
+        height: 18px;
+        width: auto;
+    }
+    
+    .cart-avatar {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 3px;
+        left: 55%;
+    }
+
+    .cart-container {
+        background-color: white;
+        width: 90%;
+        height: 230px;
+        border-radius: 10px;
+        box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.308);
+        top: 50px;
+        margin: 30px;
+        position: fixed;
+        display: none;
+        align-items: center;
+        z-index: 2000;
+    }
+
+    .cart-content {
+        display: block;
+        color: var(--darkgrey);
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 0 auto;
+        font-size: 0.9em;
+        font-weight: 500;
+        line-height: 1.8;
+        padding: 5px;
+    }
+
+    .cart-items {
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 20px;
+    }    
+
+    .slide-gallery {
+        position: relative;
+        margin: 0 auto 0 auto;
+        display: flex;
+        height: 250px;
+        width: 50vw;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .slide-gallery img {
+        display: flex;
+        height: 120%;
+        min-width: 100%;
+    }
+
+    .arrows {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto 0 auto;
+        background-color: white;
+        top: 115px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid var(--lightorange);
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    .price-discount {
+        color: var(--orange);
+        background-color: var(--paleorange);
+        width: 50px;
+        height: 27px;
+        border-radius: 20%;
+        text-align: center;
+        font-weight: 700;
+        line-height: 1.75;
+        margin-right: 260px;
+    }
+
+    .price-original {
+        color: var(--grey);
+        text-decoration: line-through;
+        font-weight: 700;
+        font-size: 1em; 
+    }
+
+}
 
 /*--------------desktop styling-----*/
 @media only screen and (min-width: 700px) {
@@ -582,6 +823,7 @@ header {
     
     .nav-menu a:hover {
         color: var(--darkblue);
+        transition: all ease 0.2s;
 
     }
 
@@ -717,6 +959,7 @@ header {
 
     .delete-btn:hover {
         filter: brightness(-100%);
+        transition: all ease 0.2s;
     }
 
     .checkout {
@@ -884,7 +1127,7 @@ header {
     }
 
     .active {
-        background-image: white;
+        background: white;
         opacity: 0.5;
         border: 3px solid var(--orange);
     }
@@ -929,6 +1172,7 @@ header {
 
     .arrows-pop img:hover {
         filter: invert(56%) sepia(13%) saturate(5686%) hue-rotate(347deg) brightness(103%) contrast(102%);
+        transition: all ease 0.2s;
     }
 
     .arrows {
@@ -949,6 +1193,7 @@ header {
 
     .close-modal:hover {
         filter: invert(56%) sepia(13%) saturate(5686%) hue-rotate(347deg) brightness(103%) contrast(102%);
+        transition: all ease 0.2s;
     }
 
     /*----------product info/prices card styles-------------*/
@@ -1091,7 +1336,8 @@ header {
 }
 
 /*--------------tablet styling-----*/
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 736px) and (max-width: 1024px) {
+    
     body {
         background: white;
         display: flex;
@@ -1216,7 +1462,7 @@ header {
     .cart-top {
         height: 8px;
         width: auto;
-        margin-right: 20px;
+        margin-right: 10px;
         cursor: pointer;
     }
 
@@ -1304,6 +1550,7 @@ header {
 
     .delete-btn:hover {
         filter: brightness(-100%);
+        transition: all ease 0.2s;
     }
 
     .checkout {
@@ -1325,6 +1572,7 @@ header {
 
     .checkout:hover {
         background-color: var(--lightorange);
+        transition: all ease 0.2s;
     }
 
     /*----------main container styles-------------*/
@@ -1467,7 +1715,7 @@ header {
     }
 
     .active {
-        background-image: white;
+        background: white;
         opacity: 0.5;
         border: 3px solid var(--orange);
     }
@@ -1512,6 +1760,7 @@ header {
 
     .arrows-pop img:hover {
         filter: invert(56%) sepia(13%) saturate(5686%) hue-rotate(347deg) brightness(103%) contrast(102%);
+        transition: all ease 0.2s;
     }
 
     .arrows {
@@ -1532,6 +1781,7 @@ header {
 
     .close-modal:hover {
         filter: invert(56%) sepia(13%) saturate(5686%) hue-rotate(347deg) brightness(103%) contrast(102%);
+        transition: all ease 0.2s;
     }
 
     /*----------product info/prices card styles-------------*/
@@ -1673,113 +1923,6 @@ header {
     }
 }
 
-/*--------small mobile styling-----*/
-
-@media only screen and (min-width: 320px) and (max-width: 320px) and (orientation: portrait) {
-
-    body {
-        overflow: scroll;
-    }
-
-    header {
-        background-color: white;
-        text-align: left;
-        position: fixed;
-        width: 100%;
-        height: 68px;
-        z-index: 2000;
-        display: flex;
-    }
-    
-    .logo {
-        position: unset;
-        text-align: left;
-        margin: 0;
-        margin-left: 56px;
-        margin-top: 21px;
-        height: 18px;
-        width: auto;
-    }
-    
-    .cart-avatar {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        bottom: 3px;
-        left: 15%;
-    }
-
-    .cart-content {
-        display: flex;
-        color: var(--darkgrey);
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        font-size: 0.8em;
-        font-weight: 500;
-        line-height: 1.8;
-        padding: 5px;
-    }
-
-    .slide-gallery {
-        position: relative;
-        display: flex;
-        height: 250px;
-        width: 100vw;
-        overflow: hidden;
-    }
-
-    .slide-gallery img {
-        display: flex;
-        height: 120%;
-        min-width: 100%;
-    }
-
-    .arrows {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0 auto;
-        background-color: white;
-        top: 115px;
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        z-index: 1000;
-        cursor: pointer;
-    }
-
-    .price-new {
-        font-weight: 700;
-        font-size: 1.5em;
-        line-height: 1.6; 
-    }
-    
-    .price-discount {
-        color: var(--orange);
-        background-color: var(--paleorange);
-        width: 50px;
-        height: 27px;
-        border-radius: 20%;
-        text-align: center;
-        font-weight: 700;
-        line-height: 1.75;
-        margin-right: 60px;
-    }
-
-    .price-original {
-        color: var(--grey);
-        text-decoration: line-through;
-        font-weight: 700;
-        font-size: 1em; 
-    }
-
-}
-
-/*--small mobile styling (landscape)--*/
 
 @media only screen and (min-width: 320px) and (max-width: 670px) and (orientation: landscape) {
 
@@ -1902,6 +2045,4 @@ header {
         font-weight: 700;
         font-size: 1em; 
     }
-
 }
-
